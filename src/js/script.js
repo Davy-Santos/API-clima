@@ -1,8 +1,10 @@
+const renderApiUrl = "https://api-clima-5z6j.onrender.com/clima";
+
 async function buscarCidade() {
     const cidade = document.getElementById('cidade').value;
 
     try {
-        const response = await fetch(`https://clima-api.onrender.com/clima?q=${encodeURIComponent(cidade)}`);
+        const response = await fetch(`${renderApiUrl}?q=${encodeURIComponent(cidade)}`);
         const data = await response.json();
 
         if (data.error) {
@@ -19,4 +21,3 @@ async function buscarCidade() {
         document.getElementById('info').innerHTML = `<p style="color: red;">Erro ao buscar os dados: ${erro.message}</p>`;
     }
 }
-
