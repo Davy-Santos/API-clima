@@ -4,23 +4,21 @@ const fetch = require('node-fetch');
 const cors = require('cors');
 
 const app = express();
-const PORT = 3000;
-const API_KEY = process.env.CHAVE_API;
+app.use(cors());
 
-app.use(cors()); // Permite requisições do front-end
+const API_KEY = process.env.CHAVE_API;
 
 app.get('/clima', async (req, res) => {
     const cidade = req.query.q;
 
     try {
-        const apiResponse = await fetch(`https://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${cidade}&lang=pt`);
-        const data = await apiResponse.json();
+        const response = await fetch(`https://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${cidade}&lang=pt`);
+        const data = await response.json();
         res.json(data);
-    } catch (err) {
-        res.status(500).json({ error: 'Erro ao buscar dados da API.' });
+    } catch (erro) {
+        res.status(500).json({ error: 'Erro ao buscar dados da API' });
     }
 });
 
-app.listen(PORT, () => {
-    console.log(`Servidor rodando em http://localhost:${PORT}`);
-});
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log(`Servidor rodando na porta ${PORT}`));
