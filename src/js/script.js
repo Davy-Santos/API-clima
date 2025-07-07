@@ -1,4 +1,4 @@
-const renderApiUrl = "https://api-clima-5z6j.onrender.com/clima";
+const renderApiUrl = " https://api-clima-tg9l.onrender.com";
 
 async function buscarCidade() {
     const cidade = document.getElementById('cidade').value;
