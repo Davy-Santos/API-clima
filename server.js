@@ -4,7 +4,13 @@ const fetch = require('node-fetch');
 const cors = require('cors');
 
 const app = express();
-app.use(cors());
+
+// 🔥 Permitir apenas o seu domínio do GitHub Pages
+const corsOptions = {
+  origin: 'https://davy-santos.github.io',
+  optionsSuccessStatus: 200
+};
+app.use(cors(corsOptions));
 
 const API_KEY = process.env.CHAVE_API;
 
