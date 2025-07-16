@@ -1,6 +1,6 @@
 async function buscarCidade(){
-    let cidade = document.getElementById("cidade").value;
-    const response = await fetch(`/clima?q=${cidade}`);
+    const cidade = document.getElementById("cidade").value;
+    const response = await fetch(`https://api-clima-k05f.onrender.com/clima?q=${cidade}`);
     const data = await response.json();
 
     const info = document.getElementById('info');
