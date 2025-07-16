@@ -7,6 +7,14 @@ const cors = require('cors');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+// ✅ Permitir seu domínio do GitHub Pages
+const corsOptions = {
+  origin: 'https://davy-santos.github.io',
+  optionsSuccessStatus: 200
+};
+
+app.use(cors(corsOptions));
+
 // Serve arquivos estáticos da pasta public
 app.use(express.static(path.join(__dirname, '..')));
 
