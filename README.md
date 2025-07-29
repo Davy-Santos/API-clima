@@ -43,9 +43,6 @@ O frontend estático pode ser hospedado separadamente (como no GitHub Pages) ou 
 🌐 CORS
 O backend está configurado para permitir requisições apenas do domínio:
 
-arduino
- 
- 
 https://davy-santos.github.io
 Para mudar isso, edite o bloco:
  
