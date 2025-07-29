@@ -1,4 +1,4 @@
-# TestAPI
+# API-clima
 
 Este é um projeto full stack simples composto por um **backend em Node.js/Express** e um **frontend estático**, com o objetivo de demonstrar o consumo de APIs externas e o uso do CORS para integração com uma aplicação hospedada no GitHub Pages.
 
@@ -32,9 +32,9 @@ testAPI/
 ### 1. Backend
 
 ```bash
-cd backend
-npm install
-npm start
+-cd backend
+-npm install
+-npm start
 Certifique-se de ter o arquivo .env com a variável PORT (opcional) e outras que sua lógica possa exigir.
 
 2. Frontend
@@ -52,17 +52,13 @@ Para mudar isso, edite o bloco:
 };"
 
 📦 Dependências Principais
-express
-
-cors
-
-dotenv
-
-node-fetch
+-express
+-cors
+-dotenv
+-node-fetch
 
 📁 Deploy
 Frontend: recomendado via GitHub Pages
-
 Backend: pode ser hospedado no Render, Railway ou Vercel com suporte a Node.js.
 
 🧑‍💻 Autor
