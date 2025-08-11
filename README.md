@@ -1,23 +1,6 @@
 # API-clima
 
 Este é um projeto full stack simples composto por um **backend em Node.js/Express** e um **frontend estático**, com o objetivo de demonstrar o consumo de APIs externas e o uso do CORS para integração com uma aplicação hospedada no GitHub Pages.
-
-## 🗂 Estrutura do Projeto
-
-testAPI/
-├── backend/ # Servidor Express
-│ ├── server.js # Código principal do backend
-│ ├── package.json # Dependências e scripts
-│ ├── .env # Variáveis de ambiente
-│ └── ...
-└── frontend/
-└── src/
-├── css/
-│ ├── reset.css
-│ └── style.css
-└── js/
-└── script.js
- 
  
 ## 🚀 Funcionalidades
 
